@@ -164,36 +164,67 @@ table {
           </ul>
         </div>
       </nav>
+
+
+
+
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <section>
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Dashboard </h1> 
+          <h1 class="h2">Hotels </h1> 
         </div>
         <div class="container statistique">
-        <table class="table">
+        <div style="height: 50vh;overflow-x:auto; overflow-y:auto;">
+  <table class="table table-responsive">
     <tr>
       <th>Name</th>
-      <th>Age</th>
-      <th>Gender</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Category</th>
+      <th>Room Number</th>
       <th>Actions</th>
     </tr>
+    <?php
+        include  "hotelInfo.php";
+    ?>
+  </table>
+</div>
+        </div>
+        
+        </section>
+        <section>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Client </h1> 
+        </div>
+        <div class="container statistique">
+        <div style="height: 50vh;overflow-x:auto; overflow-y:auto;width : fit-content">
+  <table class="table table-responsive" style="width : fit-content">
     <tr>
-      <td>John</td>
-      <td>25</td>
-      <td>Male</td>
-      <td>
-        <button class="btn btn-primary">Update</button>
-        <button class="btn btn-danger">Delete</button>
-      </td>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>num</th>
+      <th>cin</th>
+      <th>role</th>
+      <th>Actions</th>
     </tr>
+ 
+    <?php
+        include  "ClientInfo.php";
+    ?>
    
   </table>
         </div>
+        </div>
+        
+        </section>
       </main>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper-base.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
