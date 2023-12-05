@@ -16,7 +16,7 @@ if(isset($_POST['adduser']))
     if(mysqli_query($conn, $sql))
     {
         echo '<script> alert("Data Saved"); </script>';
-        header('Location: ../../index.php');
+        header('Location: ../Pages/login.php');
     }
     else
     {
