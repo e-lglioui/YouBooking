@@ -18,7 +18,7 @@ CREATE TABLE users (
  CREATE TABLE hotels (
 	id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50),
-    adress VARCHAR(250),
+    country VARCHAR(250),
     email VARCHAR(100),
     phone VARCHAR(50),
     category VARCHAR(50),
