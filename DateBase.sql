@@ -17,7 +17,7 @@ CREATE TABLE users (
 )ENGINE=INNODB;
  CREATE TABLE hotels (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(50),
+    nom VARCHAR(50),
     country VARCHAR(250),
     email VARCHAR(100),
     phone VARCHAR(50),

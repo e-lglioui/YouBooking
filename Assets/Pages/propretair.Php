@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"> 
                     <span class="fs-5 d-none d-sm-inline">Menu</span>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item" onclick="loadDoc()">
+                    <li class="nav-item" onclick="load()">
                         <i class="fa-solid fa-house" style="color: #ffffff;"></i> <span class="ms-1 d-none d-sm-inline text-white" >Home</span>
                         
                     </li>
@@ -38,11 +39,11 @@
                         <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                         <i class="fa-solid fa-border-all" style="color: #ffffff;"></i> <span class="ms-1 d-none d-sm-inline text-white">Products</span> </a>
                             <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline text-white">AJOUTER ROOM</span> </a>
+                            <li class="w-100"  onclick="AjoterRoom() ">
+                                 <span class="d-none d-sm-inline text-white">AJOUTER ROOM</span>
                             </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline text-white">MODIFIER ROOM</span></a>
+                            <li  onclick="EdetRoom()">
+                                 <span class="d-none d-sm-inline text-white">MODIFIER ROOM</span>
                             </li>
 
                         </ul>
@@ -59,7 +60,7 @@
                         <span class="d-none d-sm-inline mx-1 text-white">componentes</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu text-small shadow">
-                        <li><a class="dropdown-item text-primary" href="#">New hotele request</a></li>
+                        <li onclick="hotel()">New hotele request</li>
                         <li><a class="dropdown-item text-primary" href="#">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider text-primary">
@@ -71,6 +72,9 @@
         </div>
         <div class="col py-3" id="contenue">
         <div>
+            <?php 
+            include("../../index.php")
+            ?>
   <canvas id="myChart"></canvas>
 </div>
 
