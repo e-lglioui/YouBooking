@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><span class="fw-bolder text-primary">YouBooking
+            <a class="navbar-brand" href="../../index.php"><span class="fw-bolder text-primary">YouBooking
                 </span></a>
             <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -79,20 +79,18 @@
                 <input type="text" id="form3Example1cg" name="cin" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example1cg">CIN</label>
                 </div>
+                  <select id="form3Example1cg" class="form-control form-control-lg" id="inpuut" name="role">
+                      <option value="1">Client</option>
+                      <option value="2">Proprietere</option>
+                  </select>
 
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                  <label class="form-check-label" for="form2Example3g">
-                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
-                  </label>
-                </div>
 
                 <div class="d-flex justify-content-center">
                   <button type="Submit" name="adduser"
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.php"
                     class="fw-bold text-body"><u>Login here</u></a></p>
 
               </form>

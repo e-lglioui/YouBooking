@@ -1,0 +1,32 @@
+28-11-2023 
+(SQUAD): Discussion sue le brief
+
+29-11-2023
+(SQUAD): -Commencer documentaion sur des nouveaux termes necessaire dans ce brief
+        -Realiser le diagramme usecases
+        -Diagramme de classe
+        -Creation de database
+
+30-11-2023
+(SQUAD): Repartition des taches
+(SALEK):"Client" Commencer le frontend de home page
+(ELGLIOUI):"Propreietere" Commencer le travail sur le l'insertion des hotels
+(BRNSAYH):"Admin" Comencer le travail sur dashboard
+
+--WEEKEND--
+(SALEK): Realisation de login and register pages frontend and backend
+(BENSAYH): 
+(ELGLIOUI): Travail sur dashboard avec Ajax
+
+04-12-2023
+(SALEK): Improving my frontend
+(BENSAYH): Working on update function in Hotels dashboard
+(ELGLIOUI): Insertion des chambres
+
+05-12-2023
+(SALEK): Working on the reservation function
+(BENSAYH): Working on update the roles
+(ELGLIOUI): Insertion des chambres
+
+06-12-2023
+(SQUAD): Mise on situtation
