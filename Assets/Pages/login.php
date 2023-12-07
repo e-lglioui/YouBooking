@@ -44,8 +44,8 @@
             </div>
         </div>
     </nav>
-    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-    <form action="../PHP/session.php" method="POST">
+    <div class="mask d-flex align-items-center justify-content-center h-100 " style="height: 100vh !important;">
+    <form class="gradient-custom-3 p-5 w-50" action="../PHP/session.php" method="POST">
 
   <div class="form-outline mb-4">
     <input type="email" id="form2Example1" name="email" class="form-control" />
