@@ -1,12 +1,12 @@
 
-function loadDoc() {
+function load() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
        document.getElementById("contenue").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "e.php", true);
+    xhttp.open("GET","index.php", true);
     xhttp.send();
   }
 
@@ -31,4 +31,36 @@ function loadDoc() {
       }
     }
   });
+  }
+
+  function AjoterRoom() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("contenue").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajoterRoom.php", true);
+    xhttp.send();
+  }
+
+  function EdetRoom() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("contenue").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "EdetRoom.php", true);
+    xhttp.send();
+  }
+  function hotel() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("contenue").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "hotelRequest.php", true);
+    xhttp.send();
   }
