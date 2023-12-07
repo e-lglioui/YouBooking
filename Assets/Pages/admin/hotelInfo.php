@@ -10,16 +10,7 @@ $conn = new mysqli($servername, $username, $password,$db);
 $sql = "SELECT id, name, adress, email, phone, category, nchambre, id_user FROM hotels";
 $result = $conn->query($sql);?>
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Category</th>
-        <th>Number of Rooms</th>
-        <th>Action</th>
-    </tr>
+
 
 <?php
 if ($result->num_rows > 0) { 

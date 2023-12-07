@@ -9,12 +9,12 @@ $conn = new mysqli($servername, $username, $password,$db);
 
 $sql = "SELECT id, lname, fname, email, password, num, cin, 
     CASE
-        WHEN id_role = 1 THEN 'Admin'
+        WHEN id_role = 1 THEN 'admin'
         WHEN id_role = 2 THEN 'proprietaire'
         WHEN id_role = 3 THEN 'client'
     END as id_role 
     FROM users 
-    GROUP BY id_role";
+    order BY id_role";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -31,11 +31,11 @@ if ($result->num_rows > 0) {
         <td>
 
                       <!-- Button trigger modal -->
-                      <a href='../../includes/updateClient.php?id=<?php echo $row['id']; ?>' class='btn btn-primary'   data-bs-toggle="modal" data-bs-target="#exampleModal">Update</a>
+                      <a href='../../includes/updateClient.php?id=<?php echo $row['id']; ?>' class='btn btn-primary'   data-bs-toggle="modal" data-bs-target="#exampleModal--<?php echo $row["id"]; ?>">Update</a>
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal--<?php echo $row["id"]; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="../../includes/updateClient.php" method="POST">
+      <form action="../../includes/updateClient.php?id=<?php echo $row["id"]; ?>" method="POST">
   <div class="mb-3">
     <label for="id" class="form-label">ID</label>
     <input type="text" class="form-control" id="id" name="id" value="<?php echo $row["id"]; ?>">
@@ -76,7 +76,7 @@ if ($result->num_rows > 0) {
     <label for="id_user" class="form-label">User ID</label>
     <input type="text" class="form-control" id="id_user" name="id_role" value="<?php echo $row["id_role"]; ?>">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 </form>
 
       </div>

@@ -45,3 +45,9 @@ CREATE TABLE rooms (
     FOREIGN KEY (id_user) REFERENCES users(id),
     FOREIGN KEY (id_room) REFERENCES rooms(id)
  )ENGINE=INNODB;
+ create table request (
+	id int primary key AUTO_INCREMENT,
+    demande varchar(10) CHECK (demande IN ('admin', 'client', 'proprietaire')),
+    id_user int, 
+    FOREIGN key (id_user) REFERENCES users(id)
+) ENGINE = INNODB;
