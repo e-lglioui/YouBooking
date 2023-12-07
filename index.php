@@ -34,16 +34,67 @@
                     </form>
                 </div>
                 <div class="d-flex align-items-center">
-                    <button data-mdb-ripple-init type="button" class="btn btn-lightpx-3 me-2">
+                    <button type="button" class="data-mdb-ripple-init btn btn-lightpx-3 me-2">
                         Login
                     </button>
-                    <button data-mdb-ripple-init type="button" class="btn btn-primary me-3">
+                    <button type="button" class="data-mdb-ripple-init btn btn-primary me-3">
                         Sign up
                     </button>
                 </div>
             </div>
         </div>
     </nav>
+<!--    --MODAl---->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <span class="form-label">Your Destination</span>
+                            <input class="form-control" type="text" placeholder="Enter a destination or hotel name">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Check In</span>
+                                    <input class="form-control" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <span class="form-label">Check out</span>
+                                    <input class="form-control" type="date" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <span class="form-label">Rooms</span>
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Reserve</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="about" class="about">
 
         <div class="container" data-aos="fade-up">
@@ -81,7 +132,7 @@
                         <div class="card-body">
                             <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">ASUS Rog</span> <span class="float-end price-hp">12354.00&euro;</span> </div>
                             <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
-                            <div class="text-center my-4"> <a href="#" class="btn btn-warning">Check offer</a> </div>
+                            <div class="text-center my-4"> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reserve Now</button> </div>
                         </div>
                     </div>
                 </div>
@@ -90,7 +141,7 @@
                         <div class="card-body">
                             <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">12354.00&euro;</span> <span class="float-end"><a href="#">Example</a></span> </div>
                             <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
-                            <div class="d-grid gap-2 my-4"> <a href="#" class="btn btn-warning">Check offer</a> </div>
+                            <div class="d-grid gap-2 my-4">  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reserve Now</button> </div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +151,7 @@
                         <div class="card-body">
                             <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">12354.00&euro;</span> <span class="float-end"><a href="#" class="small text-muted">Reviews</a></span> </div>
                             <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
-                            <div class="text-center my-4"> <a href="#" class="btn btn-warning">Check offer</a> </div>
+                            <div class="text-center my-4">  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reserve Now</button> </div>
                             <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
                         </div>
                     </div>
@@ -111,7 +162,7 @@
                         <div class="card-body">
                             <div class="clearfix mb-3"> <span class="float-start price-hp">12354.00&euro;</span> <span class="float-end"><a class="text-muted small" href="#">Reviews</a></span> </div>
                             <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
-                            <div class="text-center my-4"> <a href="#" class="btn btn-warning">Check offer</a> </div>
+                            <div class="text-center my-4">  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Reserve Now</button> </div>
                             <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
                         </div>
                     </div>
@@ -120,7 +171,7 @@
         </div>
     </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="Assets/JS/main.js"></script>
 </body>
 
