@@ -27,6 +27,10 @@
   border-right: 1px solid #dee2e6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+nav{
+  position: fixed;
+  z-index: 10;
+}
 nav.navbar{
     position: fixed;
     top: 0;
@@ -77,6 +81,9 @@ h3 {
   border-radius: 1rem;
   margin-left: 1rem;
 }
+
+
+
 table {
       background-color: #f2f2f2;
       border: 1px solid #ddd;
@@ -138,29 +145,24 @@ table {
         <div class="sidebar-sticky ">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="#">
+              <a class="nav-link active" href="#hotels">
                 <span data-feather="home"></span>
-                Dashboard <span class="sr-only">(current)</span>
+                Hotels <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#clients">
                 <span data-feather="users"></span>
                 Clients
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="graph.php">
                 <span data-feather="shopping-cart"></span>
-                Proprietaires
+                graph
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Admins
-              </a>
-            </li>
+            
           </ul>
         </div>
       </nav>
@@ -169,58 +171,55 @@ table {
 
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-        <section>
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Hotels </h1> 
-        </div>
-        <div class="container statistique">
-        <div style="height: 50vh;overflow-x:auto; overflow-y:auto;">
-  <table class="table table-responsive">
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Category</th>
-      <th>Room Number</th>
-      <th>Actions</th>
-    </tr>
-    <?php
-        include  "hotelInfo.php";
-    ?>
-  </table>
-</div>
-        </div>
-        
-        </section>
-        <section>
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Client </h1> 
-        </div>
-        <div class="container statistique">
-        <div style="height: 50vh;overflow-x:auto; overflow-y:auto;width : fit-content">
-  <table class="table table-responsive" style="width : fit-content">
-    <tr>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th>num</th>
-      <th>cin</th>
-      <th>role</th>
-      <th>Actions</th>
-    </tr>
- 
-    <?php
-        include  "ClientInfo.php";
-    ?>
-   
-  </table>
-        </div>
-        </div>
-        
-        </section>
-      </main>
+  <section>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2" id="hotels">Hotels </h1> 
+    </div>
+    <div class="container statistique">
+      <div style="height: 50vh;overflow-x:auto; overflow-y:auto;">
+        <table class="table ">
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Category</th>
+            <th>Room Number</th>
+            <th>Actions</th>
+          </tr>
+          <?php
+              include  "hotelInfo.php";
+          ?>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2" id="clients">Client </h1> 
+    </div>
+    <div class="container statistique">
+      <div style="height: 50vh;overflow-x:auto; overflow-y:auto;">
+        <table class="table ">
+          <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>num</th>
+            <th>cin</th>
+            <th>role</th>
+            <th>Actions</th>
+          </tr>
+          <?php
+              include  "ClientInfo.php";
+          ?>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
